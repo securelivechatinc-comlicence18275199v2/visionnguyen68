@@ -42,41 +42,29 @@
     <div class="name">Vision Nguyễn</div>
   </div>
 
-  <!-- LIVECHAT CODE -->
+  <!-- ===================== LIVECHAT CHUẨN  ===================== -->
   <script>
       window.__lc = window.__lc || {};
-      window.__lc.license = 19355574;
-      window.__lc.integration_name = "manual_channels";
+      window.__lc.license = 19386014;   // License của bạn
+      window.__lc.integration_name = "manual_onboarding";
       window.__lc.product_name = "livechat";
-
-      (function(n,t,c){
-          function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
-          var e={_q:[],_h:null,_v:"2.0",
-              on:function(){i(["on",c.call(arguments)])},
-              once:function(){i(["once",c.call(arguments)])},
-              off:function(){i(["off",c.call(arguments)])},
-              get:function(){if(!e._h)throw new Error("Widget chưa load.");return i(["get",c.call(arguments)])},
-              call:function(){i(["call",c.call(arguments)])},
-              init:function(){
-                  var n=t.createElement("script");
-                  n.async=true;
-                  n.src="https://cdn.livechatinc.com/tracking.js";
-                  t.head.appendChild(n);
-              }
-          };
-          !n.__lc.asyncInit && e.init();
-          n.LiveChatWidget = n.LiveChatWidget || e;
-      })(window,document,[].slice);
   </script>
 
-  <!-- AUTO OPEN CHAT -->
+  <!-- đúng file widget -->
+  <script src="https://cdn.livechatinc.com/widget/2.0/widget.js" async></script>
+
+  <!-- tự mở khung chat -->
   <script>
-      LiveChatWidget.on('ready', function() {
-          setTimeout(function(){
-              LiveChatWidget.call('maximize'); // mở ô chat
-          }, 800);
+      window.addEventListener("lc_widget_ready", function () {
+          LiveChatWidget.call("maximize");
       });
   </script>
+
+  <noscript>
+      <a href="https://www.livechat.com/chat-with/19386014/" rel="nofollow">Chat với hỗ trợ</a> —
+      powered by LiveChat
+  </noscript>
+  <!-- =========================================================== -->
 
 </body>
 </html>
